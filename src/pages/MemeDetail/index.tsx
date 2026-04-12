@@ -1,1 +1,1 @@
-export { MemeDetail } from "./MemeDetail";
+export { MemeDetail } from "./page";

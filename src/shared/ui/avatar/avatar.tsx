@@ -1,7 +1,23 @@
-export const Avatar = () => {
+import cn from "classnames";
+
+interface AvatarProps {
+  imageUrl?: string;
+  altText?: string;
+  className?: string;
+}
+export const Avatar = ({ imageUrl, altText, className }: AvatarProps) => {
   return (
-    <button className="flex items-center gap-2 p-1.5 rounded-full hover:bg-bg-secondary transition-colors">
-      <div className="w-12 h-12 border-2 border-main-dark rounded-full flex items-center justify-center"></div>
-    </button>
+    <div
+      className={cn(
+        "size-12 border-2 border-main-dark rounded-full flex items-center justify-center overflow-hidden",
+        className,
+      )}
+    >
+      <img
+        src={imageUrl || "/vatrushki.png"}
+        alt={altText || "User Avatar"}
+        className="w-full h-full"
+      />
+    </div>
   );
 };

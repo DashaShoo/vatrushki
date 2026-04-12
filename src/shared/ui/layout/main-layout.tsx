@@ -8,7 +8,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <div className="min-h-screen bg-basic-light">
       <Header />
-      <main>{children}</main>
+      <main className="px-5">{children}</main>
     </div>
   );
 };
