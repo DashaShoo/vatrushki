@@ -1,1 +1,1 @@
-export { AddMeme } from "./AddMeme";
+export { AddMeme } from "./add-meme";

@@ -43,6 +43,7 @@ export const AddMeme = () => {
     };
     mockedMemes.push(newMeme);
     alert("Мем отправлен на модерацию!");
+    handleReset();
   };
 
   const handleReset = () => {
