@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom";
 import LikeButton from "../buttons/like-button";
 import { ROUTES } from "@/shared/constants/routes";
+import type { Meme } from "@/shared/types/types";
 
-interface MemeCardProps {
-  id: string | number;
-  title: string;
-  imageUrl: string;
-  initialLikes?: number;
+interface MemeCardProps extends Omit<Meme, "description" | "owner"> {
   initialLiked?: boolean;
   onLike?: (id: string | number, isLiked: boolean, likeCount: number) => void;
   onClick?: (id: string | number) => void;
@@ -17,7 +14,7 @@ const MemeCard = ({ id, title, imageUrl }: MemeCardProps) => {
     <Link
       to={ROUTES.MEME_DETAIL(id)}
       className={
-        " bg-white rounded-xl overflow-hidden border-2 border-main-dark transition-all duration-300 hover:shadow-xl cursor-pointer f-wull h-fit p-3 gap-3 flex flex-col"
+        "bg-white rounded-xl overflow-hidden border-2 border-main-dark transition-all duration-300 hover:shadow-xl cursor-pointer w-full h-fit p-3 gap-3 flex flex-col"
       }
     >
       <div className="relative overflow-hidden rounded-lg">

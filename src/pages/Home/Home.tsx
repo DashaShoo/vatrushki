@@ -1,6 +1,7 @@
 import MemeCard from "@/shared/ui/meme-card/meme-card";
 import Masonry from "react-masonry-css";
 import { mockedMemes } from "@/shared/constants/mocked-memes";
+import type { Meme } from "@/shared/types/types";
 
 const breakpointColumns = {
   default: 5,
@@ -18,8 +19,14 @@ export const Home = () => {
         className="flex w-full px-12 py-5 gap-6"
         columnClassName="flex flex-col w-full gap-6"
       >
-        {mockedMemes.map((meme) => (
-          <MemeCard title={meme.title} imageUrl={meme.imageUrl} id={meme.id} />
+        {mockedMemes.map((meme: Meme) => (
+          <MemeCard
+            key={meme.id}
+            title={meme.title}
+            imageUrl={meme.imageUrl}
+            id={meme.id}
+            initialLikes={meme.initialLikes}
+          />
         ))}
       </Masonry>
     </section>

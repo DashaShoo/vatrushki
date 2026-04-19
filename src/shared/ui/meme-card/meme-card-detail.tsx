@@ -1,24 +1,28 @@
 import { mockedMemes } from "@/shared/constants/mocked-memes";
 import LikeButton from "../buttons/like-button";
 import { Avatar } from "../avatar/avatar";
+import type { Meme } from "@/shared/types/types";
 
 interface MemeCardDetailProps {
   id: string | number;
 }
 
 const MemeCardDetail = ({ id }: MemeCardDetailProps) => {
-  const meme = mockedMemes.find((m) => m.id === Number(id)) || {
+  const meme: Meme = mockedMemes.find((m) => m.id === Number(id)) || {
+    id: 0,
     title: "Мем не найден",
     imageUrl: "/not-found.png",
     description: "К сожалению, мем с таким ID не найден.",
     owner: "Неизвестный",
     initialLikes: 0,
   };
+
   const { title, imageUrl, description, owner, initialLikes } = meme;
+
   return (
     <div
       className={
-        "bg-white rounded-xl overflow-hidden border-2 border-main-dark f-wull h-full p-3 gap-3 flex flex-col text-main-dark text-regular font-montserrat"
+        "bg-white rounded-xl overflow-hidden border-2 border-main-dark w-full h-full p-3 gap-3 flex flex-col text-main-dark text-regular font-montserrat"
       }
     >
       <div className="relative overflow-hidden rounded-lg">

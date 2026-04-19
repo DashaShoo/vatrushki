@@ -2,23 +2,24 @@ import { useParams } from "react-router-dom";
 import MemeCard from "@/shared/ui/meme-card/meme-card";
 import MemeCardDetail from "@/shared/ui/meme-card/meme-card-detail";
 import { mockedMemes } from "@/shared/constants/mocked-memes";
+import type { Meme } from "@/shared/types/types";
 
 export const MemeDetail = () => {
   const { id } = useParams<{ id: string }>();
   const currentId = Number(id);
 
-  const memes = mockedMemes.filter((m) => m.id !== currentId);
+  const memes: Meme[] = mockedMemes.filter((m) => m.id !== currentId);
 
-  const leftMemes = memes.slice(0, 10);
-  const rightMemes = memes.slice(10);
+  const leftMemes: Meme[] = memes.slice(0, 10);
+  const rightMemes: Meme[] = memes.slice(10);
 
-  const leftColumns: (typeof memes)[] = Array.from({ length: 2 }, () => []);
+  const leftColumns: Meme[][] = Array.from({ length: 2 }, () => []);
 
   leftMemes.forEach((meme, i) => {
     leftColumns[i % 2].push(meme);
   });
 
-  const rightColumns: (typeof memes)[] = Array.from({ length: 3 }, () => []);
+  const rightColumns: Meme[][] = Array.from({ length: 3 }, () => []);
 
   rightMemes.forEach((meme, i) => {
     rightColumns[i % 3].push(meme);

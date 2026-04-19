@@ -12,14 +12,14 @@ const Header = () => {
 
       <SearchBar />
 
-      <div className="flex items-center">
+      <div className="flex items-center gap-5">
         <Link to={ROUTES.ADD_MEME}>
-          <button className="p-2 rounded-full hover:bg-bg-secondary transition-colors relative group">
+          <button className="rounded-full hover:bg-bg-secondary transition-colors relative group">
             <AddIcon className="w-7 h-7 text-main-dark" />
           </button>
         </Link>
 
-        <button className="p-2 rounded-full hover:bg-bg-secondary transition-colors relative">
+        <button className="rounded-full hover:bg-bg-secondary transition-colors relative">
           <NotificationIcon className="w-7 h-7 text-main-dark" />
         </button>
         <Link to={ROUTES.PROFILE}>
