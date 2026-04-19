@@ -13,7 +13,7 @@ const MemeCardDetail = ({ id }: MemeCardDetailProps) => {
     title: "Мем не найден",
     imageUrl: "/not-found.png",
     description: "К сожалению, мем с таким ID не найден.",
-    owner: "Неизвестный",
+    owner: { name: "Неизвестный" },
     initialLikes: 0,
   };
 
@@ -45,8 +45,8 @@ const MemeCardDetail = ({ id }: MemeCardDetailProps) => {
         <p>{description}</p>
 
         <div className="flex items-center gap-2 self-end">
-          <Avatar className="size-10" />
-          <span>{owner}</span>
+          <Avatar className="size-10" imageUrl={owner.avatarUrl} />
+          <span>{owner.name}</span>
         </div>
       </div>
     </div>

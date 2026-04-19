@@ -4,6 +4,7 @@ import { Avatar } from "../avatar/avatar";
 import { Logo } from "../logo";
 import { SearchBar } from "../search-bar/search-bar";
 import { ROUTES } from "../../constants/routes";
+import { currentUser } from "@/shared/constants/current-user";
 
 const Header = () => {
   return (
@@ -23,7 +24,7 @@ const Header = () => {
           <NotificationIcon className="w-7 h-7 text-main-dark" />
         </button>
         <Link to={ROUTES.PROFILE}>
-          <Avatar />
+          <Avatar imageUrl={currentUser.avatarUrl} />
         </Link>
       </div>
     </header>

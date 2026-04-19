@@ -37,7 +37,7 @@ export const AddMeme = () => {
       id: mockedMemes.length + 1,
       title: formData.title,
       description: formData.description,
-      owner: currentUser.name,
+      owner: currentUser,
       imageUrl: formData.imageUrl,
       initialLikes: 0,
     };

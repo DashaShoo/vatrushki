@@ -1,1 +1,1 @@
-export { AddMeme } from "./add-meme";
+export { AddMeme } from "./page";
