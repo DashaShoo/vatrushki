@@ -150,7 +150,7 @@ export const mockedMemes: Meme[] = [
     initialLikes: 0,
   },
   {
-    id: 13,
+    id: 14,
     title: "лошадь почему",
     description: "лошадь стоит на берегу моря океана и написано почему",
     owner: {
@@ -161,7 +161,7 @@ export const mockedMemes: Meme[] = [
     initialLikes: 0,
   },
   {
-    id: 13,
+    id: 15,
     title: "динозавр в сургуте",
     description:
       "динозавр стоит посреди дороги в сургуте и написано г. Сургут, ХМАО-Югра 31.07.24 ночью",
