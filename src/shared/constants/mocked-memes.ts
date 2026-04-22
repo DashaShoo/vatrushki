@@ -104,4 +104,72 @@ export const mockedMemes: Meme[] = [
     imageUrl: "/stark.jpg",
     initialLikes: 0,
   },
+  {
+    id: 10,
+    title: "семья вады",
+    description:
+      "бутылки с водой типо семья и там папа вада мама вада и ребенок вада и написано семья вады",
+    owner: {
+      name: "Юля Ве",
+      avatarUrl: "/vatrushki.png",
+    },
+    imageUrl: "/vada.png",
+    initialLikes: 0,
+  },
+  {
+    id: 11,
+    title: "весь мир против тимати",
+    description: "тимати и написано весь мир против тимати",
+    owner: {
+      name: "Юля Ве",
+      avatarUrl: "/vatrushki.png",
+    },
+    imageUrl: "/timati.png",
+    initialLikes: 0,
+  },
+  {
+    id: 12,
+    title: "лето уходит",
+    description: "шмель в кроссовках и написано лето уходит",
+    owner: {
+      name: "Юля Ве",
+      avatarUrl: "/vatrushki.png",
+    },
+    imageUrl: "/leto.jpg",
+    initialLikes: 0,
+  },
+  {
+    id: 13,
+    title: "тотя. ❤️",
+    description: "два губки боба без рук и написано тотя. ❤️",
+    owner: {
+      name: "Юля Ве",
+      avatarUrl: "/vatrushki.png",
+    },
+    imageUrl: "/totya.jpg",
+    initialLikes: 0,
+  },
+  {
+    id: 13,
+    title: "лошадь почему",
+    description: "лошадь стоит на берегу моря океана и написано почему",
+    owner: {
+      name: "Юля Ве",
+      avatarUrl: "/vatrushki.png",
+    },
+    imageUrl: "/why.jpg",
+    initialLikes: 0,
+  },
+  {
+    id: 13,
+    title: "динозавр в сургуте",
+    description:
+      "динозавр стоит посреди дороги в сургуте и написано г. Сургут, ХМАО-Югра 31.07.24 ночью",
+    owner: {
+      name: "Юля Ве",
+      avatarUrl: "/vatrushki.png",
+    },
+    imageUrl: "/surgut.jpg",
+    initialLikes: 0,
+  },
 ];

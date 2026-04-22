@@ -10,8 +10,8 @@ export const MemeDetail = () => {
 
   const memes: Meme[] = mockedMemes.filter((m) => m.id !== currentId);
 
-  const leftMemes: Meme[] = memes.slice(0, 10);
-  const rightMemes: Meme[] = memes.slice(10);
+  const leftMemes: Meme[] = memes.slice(10);
+  const rightMemes: Meme[] = memes.slice(0, 10);
 
   const leftColumns: Meme[][] = Array.from({ length: 2 }, () => []);
 
